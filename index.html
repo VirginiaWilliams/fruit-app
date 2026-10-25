@@ -7,16 +7,65 @@
             http-equiv="Content-Security-Policy"
             content="script-src 'self' 'unsafe-inline'"
         />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
-            rel="stylesheet"
-        />
         <link rel="stylesheet" href="./css/homeStyle.css" />
+        <script src="./js/logic.js" defer></script>
     </head>
     <body>
       <div class="home-header">
-        <h1>It's Fruit Time!</h1>
-        <h2>Yeah!</h2>
+        <div class="home-title">FrootSalad!</div>
+        <div class="home-subtitle">Yeah!</div>
+      </div>
+      <div class="page-content">
+        <!-- Input Form -->
+        <div class="input-form">
+          <form>
+            <!-- Fruit Rows -->
+            <div id="rows-container">
+              <div class="input-form-row">
+                <div class="input-field">
+                  <label for="fruit-choices">Fruit:</label>
+                  <select id="fruit-choices" class="fruit-choices" name="options">
+                    <option value="Apple">Apple</option>
+                    <option value="Banana">Banana</option>
+                    <option value="Cantalope">Cantalope</option>
+                    <option value="Grape">Grape</option>
+                    <option value="Honeydew">Honeydew</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Watermelon">Watermelon</option>
+                  </select>
+                </div>
+
+                <div class="input-field">
+                  <label for="ripeness-choices">Ripeness:</label>
+                  <select id="ripeness-choices" class="ripeness-choices" name="options">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Add Another Row Button -->
+            <button id="remove-button" class="button" type="button">-</button>
+
+            <!-- Add Another Row Button -->
+            <button id="add-button" class="button" type="button">+</button>
+            
+            <!-- Submit Button -->
+            <button id="generate-button" class="button" type="button">Submit Data</button>
+          </form>
+        </div>
+        <!-- Results -->
+        <div class="results">
+          <!-- Meta Info -->
+          Total Fruit: <span id="total-fruit">0</span><br>
+          Total Ripeness: <span id="total-ripeness">0</span><br>
+          <br>
+          <!-- Chart -->
+        </div>
       </div>
     </body>
 </html>
